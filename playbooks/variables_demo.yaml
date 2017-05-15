@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: kbohra
+  tasks:
+  - name: Set variable name
+    set_fact: 
+      var1: test machine
+  - name: Print variable value
+    debug:
+      msg: '{{var1}}'

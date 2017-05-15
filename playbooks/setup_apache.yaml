@@ -1,0 +1,15 @@
+---
+- hosts: all
+  remote_user: kbohra
+  tasks:
+  - name: Ensure the HTTpd package is present
+    yum:
+      name: httpd
+      state: present
+    become: True
+  - name: Ensure the httpd service is started
+    service:
+      name: httpd
+      state: started
+      enabled: True
+    become: True

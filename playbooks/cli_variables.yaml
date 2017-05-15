@@ -1,0 +1,7 @@
+---
+- hosts: all
+  remote_user: kbohra
+  tasks: 
+  - name: Print extra variables command arguments
+    debug:
+      msg: '{{name}}'
