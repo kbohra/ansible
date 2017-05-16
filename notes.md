@@ -130,4 +130,21 @@ PLAY RECAP *********************************************************************
 kbohra1-dev.local           : ok=2    changed=0    unreachable=0    failed=0
 ```
 
+# Deploy http page using web server
+```
+C02Q11MMG8WM:ansible kbohra$ ansible-playbook -i kbohra1-dev.snc1, playbooks/deploy_website.yaml
 
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [kbohra1-dev.snc1]
+
+TASK [Make sure website file is present and updated with permissions] **********
+changed: [kbohra1-dev.snc1]
+
+PLAY RECAP *********************************************************************
+kbohra1-dev.snc1           : ok=2    changed=1    unreachable=0    failed=0
+
+C02Q11MMG8WM:ansible kbohra$ pwd
+/Users/kbohra/Documents/personal/ansible
+```
